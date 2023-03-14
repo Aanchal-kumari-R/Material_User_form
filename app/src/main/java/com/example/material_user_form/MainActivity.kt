@@ -11,10 +11,12 @@ import com.example.material_user_form.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity(), View.OnClickListener, RadioGroup.OnCheckedChangeListener,
     CompoundButton.OnCheckedChangeListener {
     private lateinit var binding: ActivityMainBinding
+    val list: ArrayList<String> = ArrayList()
+
     var gender:String?=null
     //private var arraylist:ArrayList<String> = ArrayList()
     //var array:ArrayList<String>=ArrayList()
-    var arraylist:ArrayList<String> = ArrayList()
+
 
 
 
@@ -47,7 +49,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, RadioGroup.OnChe
         intent.putExtra("Alternenu",almonumber)
         intent.putExtra("Email",email)
         intent.putExtra("gender",gender)
-        intent.putExtra("hobbiese",arraylist)
+        intent.putExtra("hobbiese",list)
         startActivity(intent)
 
 
@@ -56,73 +58,71 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, RadioGroup.OnChe
     }
 
     override fun onCheckedChanged(checked: RadioGroup?, p1: Int) {
-        when(checked?.checkedRadioButtonId){
-            R.id.rd_male ->{
-                gender=binding.rdMale.text.toString()
+        when(checked?.checkedRadioButtonId) {
+            R.id.rd_male -> {
+                gender = binding.rdMale.text.toString()
             }
-            R.id.rd_female ->{
-                gender=binding.rdFemale.text.toString()
+            R.id.rd_female -> {
+                gender = binding.rdFemale.text.toString()
             }
             R.id.rd_trGd -> {
-                gender=binding.rdTrGd.text.toString()
+                gender = binding.rdTrGd.text.toString()
             }
 
         }
 
-
-
     }
 
-    override fun onCheckedChanged(checek: CompoundButton?, p1: Boolean) {
-        when(checek?.id){
-            R.id.ch_co ->{
-                if(binding.chCo.isChecked){
-                    arraylist.add(binding.chCo.text.toString())
+
+    override fun onCheckedChanged(buttonView: CompoundButton?, isChecked: Boolean) {
+        when (buttonView?.id) {
+            R.id.ch_co -> {
+                if (binding.chCo.isChecked) {
+                    list.add(binding.chCo.text.toString())
+                    // list.toString().replace("[", "").replace("]", "");
+                } else {
+                    list.remove(binding.chCo.text.toString())
                 }
-                else
-                {
-                    arraylist.remove(binding.chCo.text.toString())
-                }
+
             }
             R.id.ch_pc -> {
-                if ( binding.chPc.isChecked) {
-               arraylist.add(binding.chPc.toString())
+                if (binding.chPc.isChecked) {
+                    list.add(binding.chPc.text.toString())
+
+                } else {
+                    list.remove(binding.chPc.text.toString())
                 }
-                else{
-                    arraylist.remove(binding.chPc.toString())
-                }
+
             }
             R.id.ch_Tr -> {
                 if (binding.chTr.isChecked) {
-                arraylist.add(binding.chTr.toString())
+                    list.add(binding.chTr.text.toString())
+                    // list.toString().replace("[", "").replace("]", "");
+                } else {
+                    list.remove(binding.chTr.text.toString())
                 }
-                else {
-                 arraylist.add(binding.chTr.toString())
-                }
+
             }
-            R.id.ch_Rb ->{
-                if (binding.chRb.isChecked){
-                arraylist.add(binding.chRb.toString())
+            R.id.ch_Rb -> {
+                if (binding.chRb.isChecked) {
+                    list.add(binding.chRb.text.toString())
+                    // list.toString().replace("[", "").replace("]", "");
+                } else {
+                    list.remove(binding.chRb.text.toString())
                 }
-                else {
-                   arraylist.remove(binding.chRb.toString())
-                }
+
             }
             R.id.ch_Gaming -> {
                 if (binding.chGaming.isChecked) {
-                arraylist.add(binding.chGaming.toString())
+                    list.add(binding.chGaming.text.toString())
+                    // list.toString().replace("[", "").replace("]", "");
+                } else {
+                    list.remove(binding.chGaming.text.toString())
                 }
-                else {
-               arraylist.remove(binding.chGaming.toString())
 
-                }
             }
-
-
-
         }
-
-
-
     }
+
 }
+

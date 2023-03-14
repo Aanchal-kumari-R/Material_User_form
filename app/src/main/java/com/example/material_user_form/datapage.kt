@@ -11,7 +11,7 @@ class datapage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding= ActivityDatapageBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val intent=intent
+
         val Fname=intent.getStringExtra("Fname")
         val lastname=intent.getStringExtra("lasname")
         val monu=intent.getStringExtra("monumber")
@@ -23,3 +23,4 @@ class datapage : AppCompatActivity() {
 
     }
 }
+

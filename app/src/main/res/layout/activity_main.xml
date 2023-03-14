@@ -68,6 +68,7 @@
         app:prefixTextAppearance="@style/TextAppearance.AppCompat.Large"
         android:layout_marginTop="10dp"
         android:focusable="true"
+        app:counterTextColor="@color/purple_200"
         android:focusableInTouchMode="true"
         android:textColorHint="@color/card_background">
         <com.google.android.material.textfield.TextInputEditText
@@ -113,7 +114,7 @@
         android:layout_marginTop="10dp"
         android:focusable="true"
         app:counterEnabled="true"
-        app:counterMaxLength="25"
+        app:counterMaxLength="30"
         android:focusableInTouchMode="true"
         app:counterTextColor="@color/purple_200"
         android:textColorHint="@color/card_background">
