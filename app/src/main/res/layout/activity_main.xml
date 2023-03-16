@@ -9,6 +9,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+              <ImageView
+                  android:layout_width="200dp"
+                  android:layout_height="match_parent"
+                  android:id="@+id/person_image"
+                  android:src="@drawable/baseline_person_24"
+                  android:backgroundTint="@color/purple_200"
+                  android:layout_gravity="right"
+                  android:layout_marginTop="5dp"
+                  android:layout_marginBottom="5dp"
+                  />
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_fname"
         android:layout_width="match_parent"
@@ -16,7 +26,6 @@
         android:hint=" Enter First Name"
         app:endIconMode="clear_text"
         android:focusable="true"
-
         app:prefixText="Mr."
         app:prefixTextColor="@color/purple_200"
         app:startIconDrawable="@drawable/person_icon"
@@ -55,6 +64,29 @@
             android:inputType="text"
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/birth_date"
+            app:counterEnabled="true"
+            app:counterMaxLength="10"
+            app:prefixTextColor="@color/purple_200"
+            app:endIconMode="clear_text"
+            app:prefixTextAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_marginTop="10dp"
+            android:focusable="true"
+            app:counterTextColor="@color/purple_200"
+            android:focusableInTouchMode="true"
+            android:textColorHint="@color/card_background">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Date of Birth"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:inputType="number"
+                android:ems="8"
+                android:textSize="20sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -126,7 +158,15 @@
             android:inputType="textEmailAddress"
             android:textSize="20sp"/>
     </com.google.android.material.textfield.TextInputLayout>
-    <TextView
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:textSize="30sp"
+            android:layout_marginRight="10dp"
+            android:inputType="date" />
+
+     <TextView
         android:id="@+id/view_gd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
