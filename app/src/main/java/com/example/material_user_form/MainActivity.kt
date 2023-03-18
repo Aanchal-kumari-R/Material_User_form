@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, RadioGroup.OnChe
         val lname=binding.tilLname.editText?.text.toString()
         val monumber=binding.MobNo.editText?.text.toString()
         val almonumber=binding.AltMobNo.editText?.text.toString()
-        val email=binding.emailAdd.editText?.text.toString()
+        val email=binding.email.editText?.text.toString()
         val intent=Intent(this,datapage::class.java)
 
         intent.putExtra("Fname",fname)

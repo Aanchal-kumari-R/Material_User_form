@@ -9,16 +9,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-              <ImageView
-                  android:layout_width="200dp"
-                  android:layout_height="match_parent"
-                  android:id="@+id/person_image"
-                  android:src="@drawable/baseline_person_24"
-                  android:backgroundTint="@color/purple_200"
-                  android:layout_gravity="right"
-                  android:layout_marginTop="5dp"
-                  android:layout_marginBottom="5dp"
-                  />
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_fname"
         android:layout_width="match_parent"
@@ -64,29 +54,45 @@
             android:inputType="text"
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/birth_date"
-            app:counterEnabled="true"
-            app:counterMaxLength="10"
-            app:prefixTextColor="@color/purple_200"
-            app:endIconMode="clear_text"
-            app:prefixTextAppearance="@style/TextAppearance.AppCompat.Large"
-            android:layout_marginTop="10dp"
-            android:focusable="true"
-            app:counterTextColor="@color/purple_200"
-            android:focusableInTouchMode="true"
-            android:textColorHint="@color/card_background">
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
+            android:layout_height="wrap_content"  >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/birth_date"
+                android:layout_width="46dp"
                 android:layout_height="wrap_content"
-                android:hint="Enter Date of Birth"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:inputType="number"
-                android:ems="8"
-                android:textSize="20sp"/>
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_marginTop="10dp"
+
+                android:layout_marginRight="10dp"
+
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:textColorHint="@color/card_background"
+                app:counterEnabled="true"
+                app:counterTextColor="@color/purple_200"
+                app:prefixTextAppearance="@style/TextAppearance.AppCompat.Large"
+                app:prefixTextColor="@color/purple_200">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="DOB"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button"
+            android:text="Select DOB"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp">
+        </com.google.android.material.button.MaterialButton>
+    </LinearLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -136,56 +142,35 @@
             android:inputType="number"
             android:textSize="20sp"/>
     </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        app:endIconMode="clear_text"
-        android:layout_height="wrap_content"
-        android:id="@+id/email_add"
-        app:startIconDrawable="@drawable/email_icon"
-        app:prefixTextAppearance="@style/TextAppearance.AppCompat.Large"
-        android:layout_marginTop="10dp"
-        android:focusable="true"
-        app:counterEnabled="true"
-        app:counterMaxLength="30"
-        android:focusableInTouchMode="true"
-        app:counterTextColor="@color/purple_200"
-        android:textColorHint="@color/card_background">
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Email"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:inputType="textEmailAddress"
-            android:textSize="20sp"/>
-    </com.google.android.material.textfield.TextInputLayout>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Date"
-            android:textSize="30sp"
-            android:layout_marginRight="10dp"
-            android:inputType="date" />
 
-     <TextView
-        android:id="@+id/view_gd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        app:endIconMode="clear_text"
-        android:background="@color/teal_200"
-        android:text="Gender:"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:textColor="@color/black"
-        >
-    </TextView>
-    <RadioGroup
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            app:endIconMode="clear_text"
+            android:layout_height="wrap_content"
+            android:id="@+id/email"
+            app:startIconDrawable="@drawable/email_icon"
+            app:prefixTextAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_marginTop="10dp"
+            android:focusable="true"
+            app:counterEnabled="true"
+            app:counterMaxLength="30"
+            android:focusableInTouchMode="true"
+            app:counterTextColor="@color/purple_200"
+            android:textColorHint="@color/card_background">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:inputType="date"
+                android:textSize="20sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <RadioGroup
         android:id="@+id/rd_gp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        >
+        android:layout_marginTop="10dp">
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

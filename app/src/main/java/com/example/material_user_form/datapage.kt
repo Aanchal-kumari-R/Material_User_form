@@ -14,6 +14,7 @@ class datapage : AppCompatActivity() {
 
         val Fname=intent.getStringExtra("Fname")
         val lastname=intent.getStringExtra("lasname")
+        val birthdate=intent.getStringArrayExtra("birthdate" )
         val monu=intent.getStringExtra("monumber")
         val alter=intent.getStringExtra("Alternenu")
         val email=intent.getStringExtra("Email")
